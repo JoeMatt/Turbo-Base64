@@ -25,6 +25,8 @@
 #include "turbob64_.h"
 #include "turbob64.h"
 
+#include <stdlib.h>
+
 size_t tb64enclen(size_t n) { return TB64ENCLEN(n); }
  
 //----------------------- small 64 bytes lut encoding ---------------------------------------------------------------------------------------------

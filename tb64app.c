@@ -39,7 +39,12 @@
   #endif
 
 #ifdef __APPLE__
+#include <AvailabilityMacros.h>
+#if TARGET_OS_OSX
 #include <sys/malloc.h>
+#else
+#include <malloc/malloc.h>
+#endif
 #else
 #include <malloc.h>
 #endif

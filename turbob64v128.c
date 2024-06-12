@@ -24,6 +24,7 @@
 //  Turbo-Base64: ssse3 + arm neon functions (see also turbob64v256)
 
 #include <string.h>
+#include <stdlib.h>
 
   #if defined(__AVX__)
 #include <immintrin.h>
@@ -45,7 +46,7 @@
   #elif defined(__ARM_NEON)
 #include <arm_neon.h>
   #endif
-  
+
 #include "turbob64_.h"
 #include "turbob64.h"
 

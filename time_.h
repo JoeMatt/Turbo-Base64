@@ -119,7 +119,7 @@ static int    tmiszero(tm_t t)              { return !t; }
 #define MAC_OS_X_VERSION_10_12 101200
       #endif
 #define CIVETWEB_APPLE_HAVE_CLOCK_GETTIME (defined(__APPLE__) && defined(MAC_OS_X_VERSION_MIN_REQUIRED) && MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_12)
-      #if !(CIVETWEB_APPLE_HAVE_CLOCK_GETTIME)
+      #if !(CIVETWEB_APPLE_HAVE_CLOCK_GETTIME) && TARGET_OS_OSX
 #include <sys/time.h>
 #define CLOCK_REALTIME 0
 #define CLOCK_MONOTONIC 0
